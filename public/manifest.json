@@ -1,0 +1,9 @@
+{
+  "short_name": "SmartLib",
+  "name": "SmartLib — Smart Library Management System",
+  "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#111938",
+  "background_color": "#ffffff"
+}
