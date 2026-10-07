@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const API_KEY = process.env.REACT_APP_BOOK_API_KEY;
 
@@ -38,7 +38,7 @@ const DigitalLibrary = () => {
     },
   ];
 
-  // Fetch books
+  // Fetch books from Google Books API
   const searchDigitalLibrary = async (query) => {
     const cleanQuery = query.trim();
 
@@ -101,10 +101,9 @@ const DigitalLibrary = () => {
     }
   };
 
-  // ENTER KEY SEARCH
+  // Search when Enter is pressed
   const handleSearch = (e) => {
     e.preventDefault();
-
     searchDigitalLibrary(search);
   };
 
@@ -149,7 +148,7 @@ const DigitalLibrary = () => {
               </button>
             </div>
 
-            <p className="text-sm text-indigo-200 mt-3">
+            <p className="text-sm text-indigo-700 mt-3">
               Type your search and press Enter
             </p>
           </form>
@@ -338,7 +337,7 @@ const DigitalLibrary = () => {
                             rel="noopener noreferrer"
                             className="text-slate-500 font-semibold text-sm"
                           >
-                           
+                            Details →
                           </a>
                         )}
                       </div>
