@@ -1,175 +1,275 @@
-# SmartLib — Library Management System
+# 📚 Online Library Management System
 
-**Discover. Read. Learn. Manage.**
+### Discover Books. Explore Knowledge. Learn Without Limits.
 
-A production-style library management platform built with **React 18 + JavaScript + Tailwind CSS**, using a standard
-Create React App structure. It ships with a public catalog site, a member dashboard and a staff/admin console, all
-running on bundled demo data so it works with zero configuration.
+An interactive React-based Online Library Management System designed to help users explore books, discover digital resources, view book details, and explore library services and events through a user-friendly interface.
 
----
-
-## Quick start
-
-```bash
-npm install
-npm start
-```
-
-The app opens at <http://localhost:3000>.
-
-> This project uses Create React App. There is **no** `npm run dev` script and **no** Vite/Next.js/TypeScript.
-
-Other scripts:
-
-```bash
-npm run build   # production bundle in ./build
-npm test        # Jest / React Scripts test runner
-```
-
-Requires Node.js 16 or newer.
+🔗 **GitHub Repository:** [React_Project](https://github.com/Ishwaryabose3105/React_Project)
 
 ---
 
-## Demo accounts
+## 📖 About the Project
 
-| Role | Email | Password |
-| --- | --- | --- |
-| Member | `alex@smartlib.example` | `password123` |
-| Administrator | `admin@smartlib.example` | `admin123` |
+The Online Library Management System is a frontend web application developed using React.js. It provides a simple and interactive platform for exploring books and digital library resources.
 
-Both buttons are also available directly on the login page. Signing in as the administrator unlocks `/admin`.
+The project focuses on reusable React components, responsive design, page navigation, and API integration to create a smooth user experience.
 
----
+### Users can:
 
-## What's included
-
-**Public site** — Home (hero, animated statistics, featured/popular/recent books, services, events, testimonials, CTA),
-About (story, mission, vision, facilities, animated timeline), Digital Library, Book catalog, Book details, Services,
-Events, Contact (validated form + FAQ accordion), Login, Register and a 404 page.
-
-**Member dashboard** (`/dashboard`) — activity overview, books on loan with renew/return, reservations with live queue
-position, wishlist, reading history, notification centre, fines with a worked calculation, profile and settings.
-
-**Staff console** (`/admin`) — dashboard, full book CRUD (modal forms, delete confirmation, search/filter/sort/pagination),
-member management with borrowing history, issue & return circulation desk, reservation queues, categories, fines,
-reports with charts, events CRUD, announcements and circulation policy settings.
-
-### Core behaviours
-
-- **Search, filter, sort, pagination** across the catalog and admin tables, with debounced input and URL-synced filters.
-- **Fine calculation** via the reusable `calculateFine()` utility in `src/utils/helpers.js`. The rate, cap, loan period,
-  borrowing limit, renewals and grace period are all configurable at `/admin/settings`.
-  Example: due 15 September, returned 20 September → 5 days overdue × ₹10 = **₹50**.
-- **Reservation queue** — reserving an unavailable title assigns a queue position; returning a copy promotes the next
-  member to "ready for pickup" and raises a notification automatically.
-- **Notifications** with a live unread count in the navbar dropdown.
-- **Toasts** for every action (reserve, wishlist, return, profile update, errors).
-- **Dark mode** with the choice persisted in `localStorage`.
-- **Loading, empty, error and retry states** everywhere — skeleton cards and tables while data loads, and a retry button
-  if a request fails. The UI never goes blank because of a failed request.
-- **Protected routes** for the member area and **role-based routes** (`admin`, `librarian`) for the staff console.
-- **Responsive** from 320px to 1440px+, with no horizontal overflow. Wide tables scroll inside their own container.
-- **Accessible** — semantic landmarks, labelled form fields, visible focus states, ARIA attributes on dialogs, tabs and
-  menus, keyboard-friendly navigation, a skip link and alt text on every image.
+- Explore the home page and library information
+- Browse and discover books
+- Search for books using book information APIs
+- View individual book details
+- Explore the digital library
+- Discover library services
+- View library events
+- Navigate between pages using React Router
+- Access a responsive and user-friendly interface
 
 ---
 
-## Project structure
+## ✨ Features
+
+### 🏠 Home Page
+- Attractive landing page
+- Easy navigation to different sections
+- User-friendly interface
+
+### 📚 Books
+- Browse available books
+- Discover books using the Google Books API
+- Explore book information
+
+### 📖 Book Details
+- View detailed information about selected books
+- Display book information retrieved through the API
+
+### 💻 Digital Library
+- Explore digital reading resources
+- Discover books and learning materials
+
+### 🛎️ Library Services
+- Explore the services offered by the library
+- Access service information through a dedicated page
+
+### 🎉 Events
+- Explore library events and activities
+- Register for events, where supported by the application
+
+### 📱 Responsive Design
+- Clean and organized layout
+- Responsive styling for different screen sizes
+- Simple navigation between application pages
+
+---
+
+## 📸 Project Screenshots
+
+Here are five screenshots showcasing the application's interface.
+
+> Create a folder named `screenshots` in your project root and add your five screenshots using the filenames below. Replace the filenames if your screenshots have different names.
+
+### 1. Home Page
+<img width="1920" height="1080" alt="Screenshot 2026-10-15 112829" src="https://github.com/user-attachments/assets/c6ca14b1-7e2a-446a-a4df-ac24d9a97273" />
+
+### 2. Books Page
+<img width="1920" height="1080" alt="Screenshot 2026-10-15 112850" src="https://github.com/user-attachments/assets/88fbb3a0-0b82-4b77-b82d-0df2dce3bdf3" />
+
+### 3. Book Details Page
+<img width="1920" height="1080" alt="Screenshot 2026-10-15 112904" src="https://github.com/user-attachments/assets/fac9935f-1d58-4fa2-96f8-5ece68fa8a7e" />
+
+### 4. Digital Library
+<img width="1920" height="1080" alt="Screenshot 2026-10-15 112923" src="https://github.com/user-attachments/assets/2046b596-f492-4524-911e-fce2de2242a8" />
+
+### 5. Services and Events
+<img width="1920" height="1080" alt="Screenshot 2026-10-15 112930" src="https://github.com/user-attachments/assets/e322ed2f-2d63-45e4-94e3-3ab76d546ebe" />
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| React.js | Building the user interface |
+| JavaScript | Application logic and interactivity |
+| HTML5 | Web page structure |
+| CSS3 | Styling and layout |
+| Tailwind CSS | Responsive utility-based styling |
+| React Router DOM | Navigation and page routing |
+| Google Books API | Retrieving book information |
+| React Hooks | Managing state and component effects |
+| LocalStorage | Storing supported browser-side data |
+| Git | Version control |
+| GitHub | Source code hosting |
+| Netlify | Deployment, if configured |
+
+---
+
+## 📁 Project Structure
 
 ```text
-library-management-system/
+React_Project/
+│
 ├── public/
-│   ├── index.html
-│   ├── favicon.svg
-│   ├── manifest.json
-│   └── assets/
+│
+├── screenshots/
+│   ├── home.png
+│   ├── books.png
+│   ├── book-details.png
+│   ├── digital-library.png
+│   └── services-events.png
+│
 ├── src/
-│   ├── components/
-│   │   ├── books/     BookCard, BookGrid, SearchBar, FilterPanel, ReviewCard
-│   │   ├── charts/    BarChart, LineChart, DonutChart (dependency-free SVG)
-│   │   ├── common/    CoverImage, Reveal, SectionHeading, ServiceCard, EventCard, …
-│   │   ├── layout/    Navbar, Footer, Sidebar, Logo, NotificationDropdown, ScrollToTop
-│   │   └── ui/        Button, Input, Badge, Modal, ConfirmDialog, Toast, Loader,
-│   │                  Skeleton, EmptyState, ErrorState, Pagination, Rating, StatCard,
-│   │                  Tooltip, Breadcrumbs, Avatar
-│   ├── context/       AuthContext, LibraryContext, NotificationContext, ThemeContext, ToastContext
-│   ├── data/          books, users, events, categories, notifications, digitalResources, circulation
-│   ├── hooks/         useAuth, useFetch, useDebounce, useLocalStorage, useTheme, useLibrary,
-│   │                  useToast, useInView, useCountUp, useOnClickOutside, useMediaQuery
-│   ├── layouts/       PublicLayout, DashboardLayout, AdminLayout, ProtectedRoute
-│   ├── pages/         public pages + pages/dashboard/* + pages/admin/*
-│   ├── services/      api.js
-│   ├── utils/         constants.js, helpers.js
+│   ├── component/
+│   ├── pages/
+│   │   ├── Home.js
+│   │   ├── Books.js
+│   │   ├── BookDetails.js
+│   │   ├── DigitalLibrary.js
+│   │   ├── Events.js
+│   │   └── Services.js
+│   │
+│   ├── LibraryContext.js
 │   ├── App.js
-│   ├── index.js
-│   └── index.css
+│   ├── App.css
+│   ├── index.css
+│   └── index.js
+│
+├── .gitignore
 ├── package.json
+├── package-lock.json
 ├── tailwind.config.js
 ├── postcss.config.js
-├── .env.example
 └── README.md
 ```
 
----
-
-## React concepts used
-
-`useState`, `useEffect`, `useContext`, `useMemo`, `useCallback`, `useRef`, `useId`, custom hooks, props, the Context API,
-controlled forms, conditional rendering and reusable components. Effects use correct dependency arrays and abortable
-requests, so there are no infinite loops or state updates after unmount.
+*Note: This is a representative structure. Keep the actual folders and filenames from your repository.*
 
 ---
 
-## API layer and environment variables
+## ⚙️ Installation and Setup
 
-All data access goes through `src/services/api.js` — components never call `fetch` directly.
-
-```js
-getBooks()        getBookById(id)     searchBooks(query)
-getCategories()   getPopularBooks()   getRecentBooks()
-getFeaturedBooks() getRelatedBooks()  getReviews(bookId)
-getEvents()       getDigitalResources() getMembers()
-getNotifications() getLibraryStats()  sendContactMessage(payload)
-```
-
-**Out of the box** the service resolves from the bundled demo data, so the app runs with no backend and no keys.
-
-**To point it at a real API**, copy `.env.example` to `.env` and fill it in:
+### 1. Clone the repository
 
 ```bash
-cp .env.example .env
+git clone https://github.com/Ishwaryabose3105/React_Project.git
 ```
+
+### 2. Navigate to the project folder
+
+```bash
+cd React_Project
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Configure the API key
+
+If your application uses a Google Books API key, create a `.env` file in the project root and add:
+
+```env
+REACT_APP_GOOGLE_BOOKS_API_KEY=YOUR_GOOGLE_BOOKS_API_KEY
+```
+
+Replace the placeholder with your own API key, and ensure your code reads the same environment variable.
+
+**Important:** Do not upload `.env` to GitHub. Add `.env` to `.gitignore`.
+
+If you change environment variables, restart the development server.
+
+### 5. Start the application
+
+```bash
+npm start
+```
+
+Open the local development URL:
 
 ```text
-REACT_APP_API_KEY=your_api_key_here
-REACT_APP_API_BASE_URL=your_api_url_here
+http://localhost:3000
 ```
 
-When `REACT_APP_API_BASE_URL` is set, the same functions issue real `fetch` requests with a timeout, an abort signal and
-typed `ApiError` handling, sending `REACT_APP_API_KEY` as a bearer token. Read via `process.env.REACT_APP_*` only.
+---
 
-> No real key is included anywhere in this repository, and none is invented. `.env` is listed in `.gitignore` and must
-> never be committed. Remember that anything prefixed `REACT_APP_` is bundled into the client, so only ever use
-> publishable keys in a front-end app.
+## 🌐 Deployment
+
+The project can be deployed using Netlify.
+
+For a Create React App project, use these settings:
+
+- **Build command:** `npm run build`
+- **Publish directory:** `build`
+
+If the application uses React Router, configure a single-page application redirect when required.
+
+Create `public/_redirects` with:
+
+```text
+/*    /index.html   200
+```
+
+Configure any required environment variables in Netlify before building the deployed application.
 
 ---
 
-## Data persistence
+## 🧭 Application Navigation
 
-This is a front-end demo: the catalog, loans, reservations, wishlist, notifications, theme and session are stored in
-`localStorage` through the `useLocalStorage()` hook, so your changes survive a refresh. To start over, use
-**Settings → Reset demo data** in the member dashboard, or clear the `smartlib.*` keys in your browser's storage.
+```text
+Home
+  |
+  ├── Books
+  |     └── Book Details
+  |
+  ├── Digital Library
+  |
+  ├── Services
+  |
+  └── Events
+```
 
 ---
 
-## Images
+## 🎯 Learning Outcomes
 
-Book covers and event images load from `picsum.photos`. If an image fails, `CoverImage` renders a generated gradient
-cover with the title and author instead, so a broken image never appears. Avatars are drawn from initials and make no
-network request. All covers keep a consistent 2:3 aspect ratio.
+Through this project, I gained practical experience with:
+
+- Developing reusable React components
+- Using React Hooks for state and effects
+- Implementing navigation with React Router DOM
+- Integrating an external API
+- Building responsive user interfaces with Tailwind CSS
+- Managing browser-side data where required
+- Organizing a React application into reusable pages and components
+- Using GitHub for source code management
 
 ---
 
-## License
+## 🔮 Future Enhancements
 
-Provided as a demonstration project. Sample books, members, reviews and events are fictional.
+- User authentication and profile management
+- Backend and database integration
+- Book borrowing and return management
+- Advanced search and category filters
+- Book reviews and ratings
+- Improved digital reading features
+- Admin dashboard for library management
+
+---
+
+## 👩‍💻 Developer
+
+**Ishwarya Bose**
+
+GitHub: [Ishwaryabose3105](https://github.com/Ishwaryabose3105)
+
+---
+
+## ⭐ Support
+
+If you find this project interesting, consider starring the repository on GitHub.
+
+**Discover Books. Explore Knowledge. Build a Better Reading Experience. 📚**
