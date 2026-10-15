@@ -5,7 +5,8 @@
 An interactive React-based Online Library Management System designed to help users explore books, discover digital resources, view book details, and explore library services and events through a user-friendly interface.
 
 🔗 **GitHub Repository:** [React_Project](https://github.com/Ishwaryabose3105/React_Project)
-
+---
+🔗 **Live Demo:** [React_Live_Demo](https://react-project-nine-umber.vercel.app/) 
 ---
 
 ## 📖 About the Project
